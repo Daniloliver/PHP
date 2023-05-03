@@ -26,13 +26,13 @@
         <h1>Média do Aluno</h1>
         <form action="<?=$_SERVER ['PHP_SELF']?>" method="request">
             <label for="nota1">Primeira Nota:</label>
-            <input type="number" name="number1" id="number1" value="<?=$nota1?>">
+            <input type="number" name="number1" id="number1" required value="<?=$nota1?>">
             <label for="peso1">Peso 1:</label>
-            <input type="number" name="peso1" id="peso1" value="<?=$peso1?>">
+            <input type="number" name="peso1" id="peso1" required min="1" value="<?=$peso1?>">
             <label for="nota2">Segunda Nota:</label>
-            <input type="number" name="number2" id="number2" value="<?=$nota2?>">
+            <input type="number" name="number2" id="number2" required value="<?=$nota2?>">
             <label for="peso2">Peso 2:</label>
-            <input type="number" name="peso2" id="peso2" value="<?=$peso2?>">
+            <input type="number" name="peso2" id="peso2" required min="1" value="<?=$peso2?>">
             <input type="submit" value="Calcular a Média">
         </form>
     </main>
