@@ -9,16 +9,15 @@
 </head>
 <body>
     <?php 
-        $nota1 = $_REQUEST ['number1'] ?? 0;
-        $nota2 = $_REQUEST ['number2'] ?? 0;
+        $nota1 = $_REQUEST ['number1'] ?? "";
+        $nota2 = $_REQUEST ['number2'] ?? "";
+        $peso1 = $_REQUEST ['peso1'] ?? "";
+        $peso2 = $_REQUEST ['peso2'] ?? "";
+
         $mediaS = ($nota1 + $nota2) / 2 ;
-
-        $peso1 = $_REQUEST ['peso1'] ?? 1;
-        $peso2 = $_REQUEST ['peso2'] ?? 1;
-
         $mediaP = ($peso1 * $nota1 + $peso2 * $nota2) / ($peso1 + $peso2);
        
-    // Não existe divisão por 0
+    
     
     ?>
     
