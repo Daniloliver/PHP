@@ -11,7 +11,7 @@
 <body>
     <?php 
         $salario = $_POST['sal'] ?? 0;
-        const MINIMO = 1380.00;
+        const MINIMO = 1_380.60;
 
         $qtdMinimo = intdiv ($salario, MINIMO); 
         $resto = $salario % MINIMO;
@@ -23,12 +23,13 @@
         <form action="<?=$_SERVER ['PHP_SELF']?>" method="post">
             <label for="salario">Salário (R$)</label>
             <input type="number" name="sal" id="sal" step="0.01" value="<?=$salario?>">
-            <p>Considerando o salário mínimo de <strong>R$1.380,00</strong></p>
+            <p>Considerando o salário mínimo de <strong>R$1.380,60</strong></p>
             <input type="submit" value="Calcular">
         </form>
     </main>
 
     <section>
+        <h2>Resultado Final</h2>
         <?php 
             echo "<p> O seu <strong> R$ $salario </strong> equivale a <strong> $qtdMinimo salários mínimos</strong> + R$ $resto </p>";
         

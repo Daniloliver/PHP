@@ -9,8 +9,8 @@
 </head>
 <body>
     <?php 
-        $num = $_POST['num'] ?? 0;
-        $quadrada = sqrt($num);
+        $num = $_POST['num'] ?? 1;
+        $quadrada = sqrt($num); 
         $cubica = $num ** (1 / 3);
     ?>
     <main>
